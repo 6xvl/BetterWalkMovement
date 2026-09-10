@@ -70,7 +70,7 @@ local ballCenterVelocity = vec3(0, 0, 0)
 local ballBasedPlayerVelocity = vec3(0, 0, 0)
 local ballTorqueSmoother = newTemporalSmoothing(30, 1) -- faster rise = less gliding on start/stop
 
-local jumpForce = 50000
+local jumpForce = 30000 -- stock 50000 launched way too high
 local jumpForceTimer = 0
 local jumpForceTime = 0.01
 

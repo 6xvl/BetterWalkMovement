@@ -17,17 +17,24 @@ overrides it with these values:
 | Torque authority | 500 | 950 |
 | Max angular velocity (walk / sprint) | 4.5 / 13 | 8 / 23 |
 | Accel/decel smoothing | 10 | 30 |
+| Jump force | 50000 | 30000 |
+
+Stock jump launches you way higher than it has any business to. Knocked it down 40%.
 
 The last one matters most. Stock BeamNG ramps your speed up and down slowly on purpose,
 which is where the "gliding" feeling comes from. Bumping the smoothing rate makes the
 character actually stop when you let go of the stick instead of coasting for half a
 second.
 
-Sprint and camera zoom aren't touched by this mod because they don't need to be.
-BeamNG already has `sprintHold` and `cameraZoom` built into the walking character, they're
-just unbound by default. Go to Options > Controls, search "sprint", and bind
-`sprintHold` to a key (Left Shift is the obvious pick). Do the same for `cameraZoom` and
-bind it to your scroll wheel or a spare key.
+Sprint is already bound. BeamNG ships `sprintHold` on the walking character wired to
+Left Shift and Right Shift by default, no setup needed.
+
+Zoom needs one manual step, and it's not the action you'd expect. The walking character's
+jbeam lists a `cameraZoom` action, but it's dead: nothing in the base game implements it or
+binds it to anything. The action that actually works is `increase_zoom` / `decrease_zoom`
+(listed under Camera in the controls menu), because those drive the orbit camera that's
+active while you're on foot. Go to Options > Controls, search "zoom", and bind
+`increase_zoom` and `decrease_zoom` to your scroll wheel.
 
 ## Install
 
